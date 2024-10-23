@@ -1,13 +1,8 @@
 import React from "react";
-
 import "./Button.css";
 
-interface ButtonProps {
-    label: string;
-}
-
-const Button: React.FC<ButtonProps> = ({ label }) => {
-    return <button className="cc-button">{label}</button>
+const Button: React.FC = () => {
+    return <button className="cc-button">Button</button>
 }
 
 export default Button;
