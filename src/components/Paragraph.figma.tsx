@@ -1,4 +1,4 @@
-import Header from "./Header"
+import Paragraph from "./Paragraph"
 import figma from "@figma/code-connect"
 
 /**
@@ -10,16 +10,15 @@ import figma from "@figma/code-connect"
  */
 
 figma.connect(
-  Header,
-  "https://www.figma.com/design/13fdTVdoIfczIUDi5dncur/code-connect-test?node-id=11-5&node-type=frame&t=T8SXJBmwIRbvLxTh-0",
+  Paragraph,
+  "https://www.figma.com/design/13fdTVdoIfczIUDi5dncur/code-connect-test?node-id=16-36&node-type=frame&t=T8SXJBmwIRbvLxTh-0",
   {
     props: {
-      size: figma.enum("size", {
-        xlarge: "xlarge",
-        large: "large",
-        medium: "medium",
-      }),
+        uppercase: figma.enum("uppercase", {
+            default: "default",
+            uppercase: "uppercase",
+        }),
     },
-    example: (props) => <Header size={props.size} />,
+      example: (props) => <Paragraph uppercase={props.uppercase}>Paragraph</Paragraph>,
   },
 )
